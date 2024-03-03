@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert an element in an array</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <input type="text " id="position" placeholder="enter position element">
+        <input type="text" id="newEl" placeholder="enter the newEl">
+        <button onclick="insertEl()">Insert</button>
+    </div>
+
+    <script>
+
+        // let array = [25, 45, 46, 85, 0, 68];
+        // let newEl = 75;
+        // let position_insert = 3;
+        // console.log(array);
+        // for (let i = array.length - 1; i >= 0; i--) {
+        //     // console.warn(i)
+        //     // console.warn(array[i])
+        //     // console.warn(`${i} is ${array[i]} `)
+        //     if (i >= position_insert) {
+        //         array[i + 1] = array[i];
+        //         // array[i] = newEl;  without conditon laagye hue print krdiya isme
+        //         if (i == position_insert) {
+        //             array[i] = newEl;
+        //         }
+        //     }
+        // }
+        // console.log(array)
+        // create insertbutton
+        function insertEl() {
+            let data = [25, 45, 65, 75, 22, 98, 25, 35]
+            console.warn(data)
+            let position = document.getElementById('position').value;
+            let newEl = document.getElementById('newEl').value;
+            newEl = parseInt(newEl)
+            for (let i = data.length - 1; i >= 0; i--) {
+                if (i >= position && !isNaN(newEl)) {
+                    data[i + 1] = data[i];
+                    if (i == position) {
+                        data[i] = newEl;
+                    }
+                }
+            }
+            console.warn(data)
+        }
+        // u can do in javascript method likke spice
+        let items = [122, 45, 2, 5]
+        items.splice(2, 0, 10)
+        console.log(items);
+        //  let toSplice_New_Methods = items.toSplice(3,0,12)
+        //  console.log(toSplice_New_Methods);
+        // let newItems = items.slice(0, 2).concat(1000, items.slice(2));
+
+    </script>
+</body>
+
+</html>

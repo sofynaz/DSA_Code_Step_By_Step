@@ -1,0 +1,14 @@
+Algorithem = to take a step to doing a work 
+--Algorithem complacity there two types
+1). Time complacity:the time complacity is mainly calculated by counting the number of steps to finish the execution......
+2). Space Complacity: is the amount of space is required to solve the probllem
+space complacity = Auxillary space + input size.
+ 
+ Big O Notion : Use to denote compacity(both)
+
+
+
+ // interview question 
+ while loop of array of strings = yes u can do
+
+ Recursion = to call own function ==infinte time 

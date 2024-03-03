@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Array Traversing</title>
+</head>
+
+<body>
+<input type="text" id="traverse">
+<button onclick="getTraverse()" >Get traverse</button>
+<br> <hr>
+
+<!-- -1 ko kaise validate karoge -->
+    <script>
+        function getTraverse(){
+            let element = document.getElementById('traverse').value;
+            if(element<data.length && !isNaN(parseInt(element))){     
+            document.write(data[element])
+            // alert(data[element])
+            }else{
+               document.write('please enter a valid number') 
+               
+            }
+           
+        }
+        let data = [9, 45, 61, 25, 5, 78, 56, 91, 0]
+        // traversing methods 
+        for (let i = 0; i < data.length; i++) {
+            // document.write(data[i])
+            document.write(`Array ${i} is${data[i]} <br>`)
+        }
+     // Accessing methods in array
+     let x=3;
+     document.write(data[3])
+
+    </script>
+</body>
+
+</html>

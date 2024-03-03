@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching an Array</title>
+</head>
+
+<body>
+    <input type="text" placeholder="enter a search number" id="searchIt">
+    <button onclick="searchItem()">searchItem</button>
+
+    <script>
+        // how to search in an array if same number here in an array like=[25,45,68,75,75,69]===q1.
+        // let data = [20, 30, 45, 75, 60, 99, 85, 56];
+        let search_items = 99;
+        let postion = undefined;
+        for (let i = 0; i < data.length - 1; i++) {
+            if (data[i] === search_items) {
+                postion = i
+            }
+            // console.log(postion);
+        }
+        // console.log(postion);
+        // console.log(data.indexOf(search_items));
+
+        // how to delete in an array
+        // data.splice(0, 2, 25)
+        // console.log(data);
+
+        // button function 
+        function searchItem() {
+            let data = [12, 25, 0, 45, 68, 75, 80, 99];
+            console.log(data);
+            let searchIt = document.getElementById('searchIt').value;
+            let postion = undefined;
+
+            for (let i = 0; i < data.length; i++) {
+                if (data[i] === parseInt(searchIt)) {
+                    postion = i;
+                }
+            }
+            console.log(postion);
+        }
+
+
+    </script>
+</body>
+
+</html>

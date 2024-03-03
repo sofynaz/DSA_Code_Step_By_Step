@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete an Array</title>
+</head>
+
+<body>
+    <input type="text" placeholder="enter the position index" id="position">
+    <button onclick="removeEle()">Remove element</button>
+
+    <script>
+
+        function removeEle() {
+            let ele = [12, 45, 23, 2];
+            console.log(ele);
+            let position = document.getElementById('position').value;
+            position = parseInt(position)
+            if (position >= 0 && position < ele.length) {
+                for (let i = position; i < ele.length; i++) {
+                    ele[i] = ele[i + 1];
+
+                }
+                ele.length = ele.length - 1;
+                console.log(ele);
+            } else {
+                console.log('Invalid position!');
+            }
+
+
+        }
+
+        // let data = [12, 45, 63, 75, 47,85 ];
+        // let position = 3;
+
+        for (let i = position; i < data.length - 1; i++) {   // i  have an doubt in -1 y=undefined
+            data[i] = data[i + 1];
+            console.log(data)
+
+        }
+        // data.length = data.length - 1;
+        // console.log(data);
+
+    </script>
+</body>
+
+</html>

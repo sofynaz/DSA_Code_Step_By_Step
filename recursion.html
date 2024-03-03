@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursion_Tutorial</title>
+</head>
+
+<body>
+    <script>
+        function recursion_Call(x) {
+            console.log(x);
+            if (x < 10) {
+                recursion_Call(x + 1)
+            }
+            // recursion_Call()  this is called recursion call
+
+        }
+        let data = 0
+        // recursion_Call(data)
+
+        //  5 factoreal
+
+        function factoreal(num) {
+            if (num == 0) {
+                return 1
+            }
+            return num * factoreal(num - 1)
+
+        }
+        let data_fact = 5;
+        console.log(factoreal(data_fact))
+
+        // steing with while
+        let data_String = ["pokemon", "sinchan", "yamahaa"]
+        let i = 0;
+        while (i < data_String.length) {
+            console.log(data_String[i]);
+            i++;
+
+        }
+
+    </script>
+</body>
+
+</html>

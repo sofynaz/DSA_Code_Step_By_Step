@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge_Two_Array</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let data = [12, 45, 8, 65, 78, 99, 55];
+        let data1 = [1, 2, 5, 4, 8, 9, 10];
+        let data2 = [];
+        for (i = 0; i < data.length; i++) {
+            data2[i] = data[i]
+        }
+        for (let i = 0; i < data1.length; i++) {
+            console.log(data2.length);
+            data2[data2.length] = data1[i];
+        }
+        console.log(data2);
+
+        // reverse order
+        let array_Nums = [1, 2, 99, 75];
+        // array_Nums.reverse()
+        // console.log(array_Nums);
+        let val_Reverse = array_Nums.reverse()
+        console.log(val_Reverse);  // means new array return krta hai
+
+        // merge methods 
+        let data_Merge = [12, 45, 78, 99, 66];
+        let data_Merge1 = [12, 56, 89, 778, 56];
+        let data3_Spread_Val = [...data_Merge, ...data_Merge1];
+        console.log(data3_Spread_Val);
+    </script>
+</body>
+
+</html>
