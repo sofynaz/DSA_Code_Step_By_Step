@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse data </title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let data = [12, 32, 55, 85, 66, 95, 65]
+        let temp;
+
+        function reverse_Array(data, start, end) {
+            temp = data[start];
+            data[start] = data[end];
+            data[end] = temp;
+            reverse_Array(data, start + 1, end - 1)
+        }
+
+        console.log(reverse_Array(data, 0, data.length - 1));
+        console.log(data);
+
+    </script>
+</body>
+
+</html>

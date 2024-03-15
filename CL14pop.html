@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA POP and PUSH in Array</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        let stack_Data = [];
+        let currentSize = stack_Data.length;
+        let max = 5;
+
+        function Push(newVal) {
+            if (currentSize >= max) {
+                alert("your stack is full know" + newVal)
+            }
+            stack_Data[currentSize] = newVal;
+            currentSize += 1;
+        }
+
+        function pop() {
+            if (currentSize > 0) {
+                currentSize -= 1;
+                stack_Data.length = currentSize;
+            } else {
+                alert("stack is already empty!")
+            }
+        }
+        Push(501)
+        Push(502)
+        Push(503)
+        Push(504)
+        Push(505)
+        pop()
+        // pop()
+
+        console.log(stack_Data);
+
+
+
+    </script>
+</body>
+
+</html>

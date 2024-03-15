@@ -1,17 +1,15 @@
+let data = [12, 32, 55, 85, 66, 95, 65]
+let temp;
 
-function recursion_call(x) {
-    console.log(x);
-    if (x < 10) {
-        recursion_call(x + 1)
+function reverse_Array(data, start, end) {
+    if(start<=end){
+        temp = data[start];
+        data[start] = data[end];
+        data[end] = temp;
+        reverse_Array(data, start + 1, end - 1)
     }
+   
 }
-let data = 0;
-// recursion_call(data)
 
-function factoreal(fa) {
-    console.log(fa)
-    return fa
-
-}
-let data_fact = 5;
-console.log(factoreal(data_fact))
+console.log(reverse_Array(data, 0, data.length - 1)); 
+console.log(data);
