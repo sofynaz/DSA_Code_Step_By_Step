@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack_with input button"></title>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <input type="text" placeholder="Enter a elements" id="newEl">
+        <button onclick="push()">push in Stack</button>
+        <button onclick="pop()">Pop from stack</button>
+        <button onclick="display()">Display all elements of Stack</button>
+
+
+    </div>
+
+    <script>
+        let data = [];
+        let max = 5;
+        let current_size = data.length;
+        function push() {
+            let val = document.getElementById('newEl').value;
+            if (current_size < max) {
+                data[current_size] = val;
+                current_size++;
+                document.getElementById('newEl').value = "";
+                console.log("element added");
+            } else {
+                alert('stack is full now' + val)
+            }
+
+        }
+        // pop methodds using here 
+        function pop() {
+            if (current_size > 0) {
+                current_size--;
+                data.length = current_size;
+            } else {
+                alert('data already empty')
+            }
+        }
+
+        let displayEl = document.getElementById('newEl')
+        function display() {
+            // for(let i = 0; i < data.length; i++){
+
+            // }
+            for (let i = 0; i <= current_size - 1; i++) {
+                console.log("stack element no " + i + " and value is " + data[i]);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
