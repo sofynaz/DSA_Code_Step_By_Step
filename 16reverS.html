@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reaverse Striing in stack</title>
+</head>
+
+<body>
+
+
+    <script>
+        let arrayData = [];
+        let current_size = arrayData.length;
+        let maxSize = 10;
+
+        function push(newVal) {
+            if (current_size < maxSize) {
+                arrayData[current_size] = newVal;
+                current_size++;
+            } else {
+                // alert("data is full");
+            }
+
+        }
+        function pop() {
+            if (current_size > 0) {
+                lastIndexRemove = arrayData[current_size - 1]
+                current_size--;
+                arrayData.length = current_size;
+                return lastIndexRemove;
+            } else {
+                // alert("Data is already empty! Bro")
+            }
+        }
+
+
+        function reverseStr(items) {
+            for (let i = 0; i < items.length; i++) {
+                push(items[i])
+            }
+            for (let i = 0; i < items.length; i++) {
+                items[i] = pop();
+                console.log(pop());
+
+            }
+        }
+
+        // string ;methods
+        let str = "NAznee";
+        let convert = str.split("");
+        reverseStr(convert)
+        // console.log(convert);
+        console.log(arrayData);
+        console.log(str.join());
+
+
+
+
+
+
+
+
+        // only this work in array and object reference change in this scenrio  ===callBy Refernce
+
+        function ref(item) {
+            item[0] = 560;
+        }
+        let a = [25]
+        ref(a)
+        // console.log(a);
+    </script>
+</body>
+
+</html>
